@@ -6,6 +6,6 @@ app = FastAPI()
 def root():
     return {"message":"HelloWorld"}
 
-@app.get("/root1")
-def root1():
-    return {"message":"HelloWorldROOT1"}
+@app.get("/root1/{id}")
+def root1(id:int):
+    return {"message":f"HelloWorldROOT1 {id}"}
